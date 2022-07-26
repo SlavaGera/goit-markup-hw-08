@@ -3,7 +3,6 @@
     openModalBtn: document.querySelector("[data-modal-open]"),
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
-    // body: document.querySelector("[data-body]"), подумать как можно исправить
     html: document.documentElement,
   };
 
@@ -14,7 +13,6 @@
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
-    refs.body.classList.toggle("no-scroll");
 
     if(refs.modal.classList.contains("is-hidden")) {
       refs.html.style.marginRight = "";
