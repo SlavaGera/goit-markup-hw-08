@@ -944,55 +944,60 @@ body {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-/* Main section */
 .banner {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--secondary-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/banner/banner-bg-sm.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/banner/banner-bg-sm.jpg);
+  margin-left: auto;
+  margin-right: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: var(--secondary-color);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/banner/banner-bg-sm.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner/banner-bg-sm.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .banner {
-    background-image: url(../../images/banner/banner-bg-sm@2x.jpg);
+    background-image: url(../images/banner/banner-bg-sm@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
-    background-image: url(../../images/banner/banner-bg-md.jpg);
+    background-image: url(../images/banner/banner-bg-md.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .banner {
-    background-image: url(../../images/banner/banner-bg-md@2x.jpg);
+    background-image: url(../images/banner/banner-bg-md@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .banner {
-    background-image: url(../../images/banner/banner-bg-lg.jpg);
+    background-image: url(../images/banner/banner-bg-lg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .banner {
-    background-image: url(../../images/banner/banner-bg-lg@2x.jpg);
+    background-image: url(../images/banner/banner-bg-lg@2x.jpg);
   }
 }
 
 .banner__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+}
+@media screen and (min-width: 1200px) {
+  .banner__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .banner__btn {
@@ -1411,10 +1416,16 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--dark-color);
+}
+@media screen and (min: width 1200px) {
+  .form__title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -1436,7 +1447,7 @@ body {
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1, 16px;
+  line-height: 1.16px;
   letter-spacing: 0.01em;
   color: var(--grey-color);
 }
