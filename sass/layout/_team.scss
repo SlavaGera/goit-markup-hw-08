@@ -1,22 +1,40 @@
-/* Team section */
-
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--light-color);
+
+    @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
 }
 
 .team-list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+        }
 }
 
 .team-list__item {
+    width: 450px;
     border: none;
     border-radius: 4px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    margin-right: 30px;
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
 }
 
 .card-set {

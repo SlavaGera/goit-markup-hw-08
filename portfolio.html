@@ -17,14 +17,58 @@
   <!--Header-->
   <header class="header">
     <div class="container header__container">
+      <a class="logo link" href="./index.html" aria-label="Логотип WebStudio">Web<span
+          class="logo--dark">Studio</span></a>
+      <button class="mobile-menu-btn btn" type="button" aria-label="Кнопка Меню" data-menu-button>
+        <svg class="mobile-menu-icon" width="24px" height="16px">
+          <use class="mobile-menu-burger" href="./images/symbol-defs.svg#icon-burger-menu"></use>
+          <use class="mobile-menu-close" href="./images/symbol-defs.svg#icon-mobile-close"></use>
+        </svg>
+      </button>
+      <!--Mobile menu-->
+      <div class="mobile-menu" data-menu>
+        <ul class="mobile-menu-nav list">
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav-link link" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav-link nav-link--active link" href="">Портфолио</a>
+          </li>
+          <li class="mobile-menu-nav__item">
+            <a class="mobile-menu-nav-link link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-contacts list">
+          <li class="mobile-menu-contacts__item">
+            <a class="mobile-menu-contacts-link contacts-link--active link" href="tel:+380991111111" aria-label="phone">+38 096 111 11 11</a>
+          </li>
+          <li class="mobile-menu-contacts__item">
+            <a class="mobile-menu-contacts-link link" href="mailto:info@example.com" aria-label="mail">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials list">
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials-link link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="Instagram">Instagram</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials-link link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="Twitter">Twitter</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials-link link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="Twitter">Facebook</a>
+          </li>
+          <li class="mobile-menu-socials__item">
+            <a class="mobile-menu-socials-link link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          </li>
+        </ul>
+  
+      </div>
       <nav class="nav">
-        <a class="logo link" href="./index.html">Web<span class="logo--dark">Studio</span></a>
         <ul class="nav-list list">
           <li class="nav-list__item">
             <a class="nav-list__link link" href="./index.html">Студия</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link link nav-list__link--active" href="./portfolio.html">Портфолио</a>
+            <a class="nav-list__link nav-list__link--active link" href="./portfolio.html">Портфолио</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link link" href="#">Контакты</a>
@@ -33,14 +77,14 @@
       </nav>
       <ul class="contacts-list list">
         <li class="contacts-list__item">
-          <a class="contacts-list__link link" href="mailto:info@devstudio.com">
+          <a class="contacts-list__link link" href="mailto:info@devstudio.com" aria-label="mail">
             <svg class="contacts-list__item__icon" width="16" height="12">
               <use href="./images/symbol-defs.svg#icon-envelope"></use>
             </svg>
             info@devstudio.com</a>
         </li>
         <li class="contacts-list__item">
-          <a class="contacts-list__link link" href="tel:+380961111111">
+          <a class="contacts-list__link link" href="tel:+380961111111" aria-label="phone">
             <svg class="contacts-list__item__icon" width="10" height="16">
               <use href="./images/symbol-defs.svg#icon-smartphone"></use>
             </svg>
@@ -75,7 +119,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="#" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project1.jpg" alt="Technoquack " width="370" />
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project1-lg.webp    1x,
+                   ./images/portfolio/project1-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project1-lg.jpg   1x,
+                    ./images/portfolio/project1-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project1-md.webp    1x,
+                   ./images/portfolio/project1-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project1-md.jpg    1x,
+                    ./images/portfolio/project1-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project1-sm.webp    1x,
+                    ./images/portfolio/project1-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project1-sm.jpg   1x,
+                    ./images/portfolio/project1-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project1-sm.jpg" alt="Technoquack " width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -94,7 +164,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project2.jpg" alt="Poster New Orlean vs Golden Star" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project2-lg.webp    1x,
+                   ./images/portfolio/project2-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project2-lg.jpg   1x,
+                    ./images/portfolio/project2-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project2-md.webp    1x,
+                   ./images/portfolio/project2-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project2-md.jpg    1x,
+                    ./images/portfolio/project2-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project2-sm.webp    1x,
+                    ./images/portfolio/project2-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project2-sm.jpg   1x,
+                    ./images/portfolio/project2-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project2-sm.jpg" alt="Poster New Orlean vs Golden Star" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -113,7 +209,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project3.jpg" alt="Restaurant Seafood" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project3-lg.webp    1x,
+                   ./images/portfolio/project3-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project3-lg.jpg   1x,
+                    ./images/portfolio/project3-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project3-md.webp    1x,
+                   ./images/portfolio/project3-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project3-md.jpg    1x,
+                    ./images/portfolio/project3-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project3-sm.webp    1x,
+                    ./images/portfolio/project3-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project3-sm.jpg   1x,
+                    ./images/portfolio/project3-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project3-sm.jpg" alt="Restaurant Seafood" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -132,7 +254,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project4.jpg" alt="Project Prime" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project4-lg.webp    1x,
+                   ./images/portfolio/project4-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project4-lg.jpg   1x,
+                    ./images/portfolio/project4-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project4-md.webp    1x,
+                   ./images/portfolio/project4-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project4-md.jpg    1x,
+                    ./images/portfolio/project4-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project4-sm.webp    1x,
+                    ./images/portfolio/project4-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project4-sm.jpg   1x,
+                    ./images/portfolio/project4-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project4-sm.jpg" alt="Project Prime" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -151,7 +299,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project5.jpg" alt="Project Boxes" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project5-lg.webp    1x,
+                   ./images/portfolio/project5-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project5-lg.jpg   1x,
+                    ./images/portfolio/project5-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project5-md.webp    1x,
+                   ./images/portfolio/project5-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project5-md.jpg    1x,
+                    ./images/portfolio/project5-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project5-sm.webp    1x,
+                    ./images/portfolio/project5-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project5-sm.jpg   1x,
+                    ./images/portfolio/project5-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project5-sm.jpg" alt="Project Boxes" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -170,7 +344,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project6.jpg" alt="Inspiration has no Borders" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project6-lg.webp    1x,
+                   ./images/portfolio/project6-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project6-lg.jpg   1x,
+                    ./images/portfolio/project6-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project6-md.webp    1x,
+                   ./images/portfolio/project6-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project6-md.jpg    1x,
+                    ./images/portfolio/project6-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project6-sm.webp    1x,
+                    ./images/portfolio/project6-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project6-sm.jpg   1x,
+                    ./images/portfolio/project6-sm@2x.jpg 2x
+                  " type="image/jpg" />                  
+                <img src="./images/portfolio/project6-sm.jpg" alt="Inspiration has no Borders" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -189,7 +389,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project7.jpg" alt="Edition Limited Edition" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project7-lg.webp    1x,
+                   ./images/portfolio/project7-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project7-lg.jpg   1x,
+                    ./images/portfolio/project7-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project7-md.webp    1x,
+                   ./images/portfolio/project7-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project7-md.jpg    1x,
+                    ./images/portfolio/project7-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project7-sm.webp    1x,
+                    ./images/portfolio/project7-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project7-sm.jpg   1x,
+                    ./images/portfolio/project7-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project7-sm.jpg" alt="Edition Limited Edition" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -208,7 +434,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project8.jpg" alt="Project LAB" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project8-lg.webp    1x,
+                   ./images/portfolio/project8-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project8-lg.jpg   1x,
+                    ./images/portfolio/project8-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project8-md.webp    1x,
+                   ./images/portfolio/project8-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project8-md.jpg    1x,
+                    ./images/portfolio/project8-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project8-sm.webp    1x,
+                    ./images/portfolio/project8-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project8-sm.jpg   1x,
+                    ./images/portfolio/project8-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project8-sm.jpg" alt="Project LAB" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -227,7 +479,33 @@
           <li class="example-list__item">
             <a class="example-list__link link" href="" target="_blank" rel="noopener nofollow noreferrer">
               <div class="example-overlay">
-                <img src="./images/project9.jpg" alt="Growing Business" width="370" />
+                <picture>
+              <source media="(min-width: 1200px)" srcset="
+                   ./images/portfolio/project9-lg.webp    1x,
+                   ./images/portfolio/project9-lg@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 1200px)" srcset="
+                    ./images/portfolio/project9-lg.jpg   1x,
+                    ./images/portfolio/project9-lg@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project9-md.webp    1x,
+                   ./images/portfolio/project9-md@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(min-width: 768px)" srcset="
+                    ./images/portfolio/project9-md.jpg    1x,
+                    ./images/portfolio/project9-md@2x.jpg 2x
+                  " type="image/jpg" />
+              <source media="(max-width: 767px)" srcset="
+                   ./images/portfolio/project9-sm.webp    1x,
+                    ./images/portfolio/project9-sm@2x.webp 2x
+                  " type="image/webp" />
+              <source media="(max-width: 767px)" srcset="
+                    ./images/portfolio/project9-sm.jpg   1x,
+                    ./images/portfolio/project9-sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <img src="./images/portfolio/project9-sm.jpg" alt="Growing Business" width="450" height="294" />
+                </picture>
                 <div class="example__overlay">
                   <p class="example__desc">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -250,52 +528,54 @@
   <!--Footer-->
   <footer class="footer">
     <div class="container">
-      <div class="footer-nav">
-        <a class="footer-logo link" href="./index.html">Web<span class="logo--light">Studio</span></a>
-        <address>
-          <ul class="footer-contacts list">
-            <li class="footer-contacts__item">
-              <a class="footer-nav__link link" href="https://goo.gl/maps/ErCyKZtS9x7sT5QV7" target="_blank"
-                rel="noopener nofollow noreferrer">г. Киев, пр-т Леси Украинки, 26
-              </a>
+      <div class="footer__flex">
+        <div class="footer-nav">
+          <a class="footer-logo link" href="./index.html">Web<span class="logo--light">Studio</span></a>
+          <address>
+            <ul class="footer-contacts list">
+              <li class="footer-contacts__item">
+                <a class="footer-nav__link link" href="https://goo.gl/maps/ErCyKZtS9x7sT5QV7" target="_blank"
+                  rel="noopener nofollow noreferrer" aria-label="address">г. Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+              <li class="footer-contacts__item">
+                <a class="footer-contacts__link link" href="mailto:info@example.com" aria-label="mail">info@example.com</a>
+              </li>
+              <li class="footer-contacts__item">
+                <a class="footer-contacts__link link" href="tel:+380991111111" aria-label="phone">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
+          <p class="footer__subscribe"><strong>присоединяйтесь</strong></p>
+          <ul class="footer-social-list list">
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="instagram">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg></a>
             </li>
-            <li class="footer-contacts__item">
-              <a class="footer-contacts__link link" href="mailto:info@example.com">info@example.com</a>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="twitter">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg></a>
             </li>
-            <li class="footer-contacts__item">
-              <a class="footer-contacts__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+            <li class="footer-social__item">
+              <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="facebook">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg></a>
+            </li>
+            <li class="social-footer-item item">
+              <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer" aria-label="linkedin">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg></a>
             </li>
           </ul>
-        </address>
-      </div>
-      <div class="footer-social">
-        <p class="footer__subscribe"><strong>присоединяйтесь</strong></p>
-        <ul class="footer-social-list list">
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-              </svg></a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-              </svg></a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-              </svg></a>
-          </li>
-          <li class="social-footer-item item">
-            <a class="footer-social__link" href="" target="_blank" rel="noopener nofollow noreferrer">
-              <svg width="20" height="20">
-                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-              </svg></a>
-          </li>
-        </ul>
+        </div>
       </div>
       <div class="footer-submit">
         <p class="footer__subscribe"><strong>Подпишитесь на рассылку</strong></p>
@@ -312,6 +592,8 @@
       </div>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
+
 </body>
 
 </html>
