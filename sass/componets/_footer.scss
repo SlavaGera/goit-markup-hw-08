@@ -77,7 +77,6 @@
     
 
 .footer__subscribe {
-    margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -91,6 +90,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .footer-social__link {
@@ -122,11 +122,11 @@
         }
        }
 
-.footer-form__subscribe {
-    margin-bottom: 20px;    
+.footer-form__subscribe {    
     width: 100%;
     min-height: 50px;
     padding-left: 16px;
+    margin: 20px auto;
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -148,7 +148,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 166px;
         width: 450px;
     }    
 

@@ -34,6 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    gap: 8px;
 
     @media screen and (min-width: 768px) {
             flex-wrap: nowrap;
@@ -46,27 +47,22 @@
     }
 }
 
-.portfolio-list__item:not(:last-child) {
-    margin-right: 8px;
-    margin-bottom: 15px;
-
-    @media screen and (min-width: 768px) {
-        margin-right: 8px;
-    }
-}
-
 .example-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.example-list__item { 
-    width: 450px;
+.example-list__item {
+    width: 480px;
+
+    @media screen and (min-width: 479px) {
+            width: 450px;
+    }
 
     @media screen and (min-width: 768px) {
             width: 354px;
-        }
+    }
     
     @media screen and (min-width: 1200px) {
         width: 370px;
@@ -105,9 +101,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 63px 21px;
+    padding: 77px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
 .example__desc {
